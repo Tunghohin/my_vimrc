@@ -1,7 +1,3 @@
-"===================VIMPLUG===================="
-
-"curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-
 call plug#begin()
 
 Plug 'preservim/nerdtree'
@@ -18,8 +14,17 @@ call plug#end()
 inoremap ?? <ESC>
 nnoremap tp :tabp<CR>
 nnoremap tn :tabn<CR>
+inoremap [ []<ESC>i
+inoremap {<CR> {<CR>}<ESC>ko
+inoremap { {}<ESC>i
+inoremap ( ()<ESC>i
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
 
 set nu
+set softtabstop=4
+set shiftwidth=4
+set autoindent
 
 
 
