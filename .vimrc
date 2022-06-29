@@ -5,6 +5,10 @@ Plug 'preservim/nerdtree'
 
 Plug 'morhetz/gruvbox'
 
+Plug 'itchyny/lightline.vim'
+
+Plug 'wojciechkepka/vim-github-dark'
+
 call plug#end()
 
 
@@ -51,9 +55,10 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
 
-"===================GRUVBOX===================="
+"====================THEMESET=================="
 
-set bg=dark                
-colorscheme gruvbox        
-set guioptions=            
-set guifont=Monaco:h17
+colorscheme ghdark
+let g:gh_color = "soft"
+let g:lightline = {
+      \ 'colorscheme': 'ghdark',
+      \ }
