@@ -9,9 +9,13 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'wojciechkepka/vim-github-dark'
 
+Plug 'pboettch/vim-cmake-syntax'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
-
-
 
 
 "====================SETTING==================="
@@ -19,19 +23,11 @@ call plug#end()
 inoremap ?? <ESC>
 nnoremap tp :tabp<CR>
 nnoremap tn :tabn<CR>
-inoremap [ []<ESC>i
-inoremap {<CR> {<CR>}<ESC>ko
-inoremap { {}<ESC>i
-inoremap ( ()<ESC>i
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
 
 set nu
 set softtabstop=4
 set shiftwidth=4
 set autoindent
-
-
 
 
 "====================NERDTREE=================="
@@ -53,6 +49,10 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
+"=====================coc.nvim==================="?
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 "====================THEMESET=================="
