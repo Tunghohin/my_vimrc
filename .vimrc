@@ -3,8 +3,6 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 
-Plug 'morhetz/gruvbox'
-
 Plug 'itchyny/lightline.vim'
 
 Plug 'wojciechkepka/vim-github-dark'
@@ -14,6 +12,8 @@ Plug 'pboettch/vim-cmake-syntax'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jiangmiao/auto-pairs'
+
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -25,10 +25,12 @@ nnoremap tp :tabp<CR>
 nnoremap tn :tabn<CR>
 
 set nu
-set softtabstop=4
+set noexpandtab
+set tabstop=4
 set shiftwidth=4
-set autoindent
-
+set softtabstop=4
+set termwinsize=10x0
+set splitbelow
 
 "====================NERDTREE=================="
 
