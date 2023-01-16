@@ -7,15 +7,12 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'wojciechkepka/vim-github-dark'
 
-Plug 'pboettch/vim-cmake-syntax'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'octol/vim-cpp-enhanced-highlight'
-
 call plug#end()
+
 
 "====================SETTING==================="
 
@@ -51,6 +48,19 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
 "=====================coc.nvim==================="?
+
+let g:coc_global_extensions = [
+	\ 'coc-json',
+	\ 'coc-clangd',
+	\ 'coc-tsserver',
+	\ 'coc-vimlsp',
+	\ 'coc-cmake',
+	\ 'coc-highlight',
+	\ 'coc-pyright'
+	\]
+
+set signcolumn=number
+
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
