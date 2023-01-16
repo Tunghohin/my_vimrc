@@ -17,7 +17,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
-
 "====================SETTING==================="
 
 inoremap ?? <ESC>
