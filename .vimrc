@@ -11,6 +11,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'octol/vim-cpp-enhanced-highlight'
+
 call plug#end()
 
 
@@ -27,6 +29,8 @@ set shiftwidth=4
 set softtabstop=4
 set termwinsize=10x0
 set splitbelow
+
+
 
 "====================NERDTREE=================="
 
@@ -51,7 +55,6 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 let g:coc_global_extensions = [
 	\ 'coc-json',
-	\ 'coc-clangd',
 	\ 'coc-tsserver',
 	\ 'coc-vimlsp',
 	\ 'coc-cmake',
@@ -60,7 +63,6 @@ let g:coc_global_extensions = [
 	\]
 
 set signcolumn=number
-
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
