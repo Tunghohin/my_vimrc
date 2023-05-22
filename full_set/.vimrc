@@ -46,7 +46,8 @@ let g:coc_global_extensions = [
 	\ 'coc-cmake',
 	\ 'coc-highlight',
 	\ 'coc-pyright',
-	\ 'coc-clangd'
+	\ 'coc-clangd'，
+	\ 'coc-explorer'
 	\]
 
 
