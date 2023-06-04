@@ -21,8 +21,7 @@ call plug#end()
 inoremap ?? <ESC>
 nnoremap tp :tabp<CR>
 nnoremap tn :tabn<CR>
-vnoremap <C-y> "+y
-nnoremap <C-p> "*p
+snoremap ?? <ESC>
 
 
 set nu
@@ -68,6 +67,12 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Use se to show errors
+nnoremap se <Cmd>CocDiagnostics<CR>
+
+" Use gb to Jump back 
+nnoremap gb <c-o>
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
