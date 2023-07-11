@@ -22,6 +22,7 @@ inoremap ?? <ESC>
 nnoremap tp :tabp<CR>
 nnoremap tn :tabn<CR>
 snoremap ?? <ESC>
+nnoremap <c-z> <nop>
 
 
 set nu
@@ -68,7 +69,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use se to show errors
 nnoremap se <Cmd>CocDiagnostics<CR>
 
 " Use gb to Jump back 
@@ -110,12 +110,12 @@ nnoremap <c-t> <Cmd>CocCommand explorer<CR>
 
 "====================THEMESET=================="
 colo seoul256
-set background=dark
-let g:seoul256_srgb = 1
 
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
       \ }
+let g:seoul256_srgb = 1
+let g:seoul256_background = 233
 
 hi Normal guibg=NONE ctermbg=NONE
 
