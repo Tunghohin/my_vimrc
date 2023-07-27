@@ -13,6 +13,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 Plug 'rhysd/vim-clang-format'
 
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
 
 
@@ -32,7 +34,7 @@ set shiftwidth=4
 set softtabstop=4
 set splitright
 "set termwinsize=30x0
-"set splitbelow
+set splitbelow
 set cino=N-s
 set hidden
 set updatetime=300
@@ -129,6 +131,7 @@ let g:seoul256_srgb = 1
 let g:seoul256_background = 233
 
 hi Normal guibg=NONE ctermbg=NONE
+
 
 "make line number transparent
 highlight Normal     ctermbg=NONE guibg=NONE
